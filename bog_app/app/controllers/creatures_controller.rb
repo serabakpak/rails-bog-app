@@ -23,9 +23,8 @@ class CreaturesController < ApplicationController
 	end
 
 
-	def create
-		
 
+	def create
 		creature = Creature.new(creature_params)
 
 		if creature.save
@@ -39,6 +38,14 @@ class CreaturesController < ApplicationController
 		
 		creature.update_attributes(creature_params)
 		redirect_to creature_path(creature) #same as creatures/#{creature.id}
+	end
+
+	def destroy
+		creature_id = params[:id]
+		creature = Creature.find_by_id(creature_id)
+		creature.destroy
+		redirect_to creatures_path
+
 	end
 
 	private
