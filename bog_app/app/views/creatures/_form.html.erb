@@ -1,0 +1,9 @@
+<%= form_for @creature, html: { multipart: true } do |f| %>
+	
+	<%= f.text_field :name %>
+	<%= f.text_area :description %>
+	<%= f.file_field :avatar %>
+	<%= f.submit "Save Creature" %>
+<% end %>
+
+
