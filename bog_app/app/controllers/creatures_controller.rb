@@ -17,6 +17,12 @@ class CreaturesController < ApplicationController
 		@creature = Creature.find_by_id(params[:id])
 	end
 
+	def destroy
+		creature = Creature.find_by_id(params[:id])
+		creature.destroy
+		redirect_to creatures_path
+	end
+
 	def create
 		creature = Creature.create(creature_params)
 		redirect_to creature_path(creature)
