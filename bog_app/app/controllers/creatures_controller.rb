@@ -13,8 +13,22 @@ class CreaturesController < ApplicationController
 		@creature = Creature.find_by_id(creature_id)
 	end
 
+	def edit
+		creature_id = params[:id]
+		@creature = Creature.find_by_id(creature_id)
+	end
+
 	def create
 		creature = Creature.new(creature_params)
+		if creature.save
+			redirect_to creature_path(creature)
+		end
+	end
+
+	def update
+		creature_id = params[:id]
+		creature = Creature.find_by_id(creature_id)
+		creature.update_attributes(creature_params)
 		if creature.save
 			redirect_to creature_path(creature)
 		end
