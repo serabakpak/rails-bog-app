@@ -24,14 +24,22 @@ class CreaturesController < ApplicationController
 	end
 
 	def create
-		creature = Creature.create(creature_params)
-		redirect_to creature_path(creature)
+		@creature = Creature.create(creature_params)
+		if @creature.save
+			redirect_to @creature
+		else
+			render 'new'
+		end
 	end
 
 	def update
-		creature = Creature.find_by_id(params[:id])
-		creature.update_attributes(creature_params)
-		redirect_to creatures_path
+		@creature = Creature.find_by_id(params[:id])
+		@creature.update_attributes(creature_params)
+		if @creature.save
+			redirect_to creatures_path
+		else
+			render 'edit'
+		end
 	end
 
 	private
