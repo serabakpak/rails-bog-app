@@ -5,4 +5,7 @@
 		Name: <%= creature.name %>
 		Description: <%= creature.description %>
 	</p>
+	<%= button_to "Show", creature, method: :get, class: 'btn btn-default' %>
+	<%= button_to "Edit", edit_creature_path(creature), method: :get, class: 'btn btn-default' %>
+	<%= button_to "Delete", creature, method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-default' %>
 <% end %>
