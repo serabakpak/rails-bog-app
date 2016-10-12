@@ -1,13 +1,20 @@
-<h1>Creatures</h1>
+<h1>Creatures of the Bog</h1>
+
 
 <% @creatures.each do |creature| %>
-	<%= creature.name %>
-	<%= creature.description %>
-	<%= image_tag creature.avatar.url(:medium) %>
-	<%= button_to "Show", creature, method: :get %>
-	<%= button_to "Edit", edit_creature_path(creature), method: :get %>
-	<%= button_to "Delete", creature, method: :delete %>
+<div class="flex-container">	
+	<p>
+	<strong>Name: </strong><%= creature.name %>
+	<strong>Description: </strong><%= creature.description %>
+	</p>
+	
+	<%= button_to "Show", creature, method: :get, class: "btn btn-success" %>
+	<%= button_to "Edit", edit_creature_path(creature), method: :get, class: "btn btn-success" %>
+	<%= button_to "Delete", creature, method: :delete, data: { confirm: "Are you sure???" }, class: "btn btn-success" %>
+	<%= image_tag creature.avatar.url(:thumb), class: "avatar-image" %><hr>
+</div>
 <% end %>
+
 
 
 

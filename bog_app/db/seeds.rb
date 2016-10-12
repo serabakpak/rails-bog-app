@@ -10,13 +10,11 @@
 
 Creature.destroy_all
 creatures = Creature.create([
-	{name: 'charlie', description: 'asian man'},
-	{name: 'charlie', description: 'dorky man'},
-	{name: 'charlie', description: 'swarly man'},
-	{name: 'charlie', description: 'nerdy man'},
-	{name: 'charlie', description: 'geeky man'}
+	{name: 'Yoda', description: 'Little green dude'},
+	{name: 'Padme', description: 'Queen'},
+	{name: 'Darth Maul', description: 'Bad dude'},
+	{name: 'Darth Sidious', description: 'First bad dude'},
+	{name: 'Chewbacca', description: 'Huge hairy dude'},
+	{name: 'Imperial Guard', description: 'Minion dude'}
 
-
-
-
-	])
+])

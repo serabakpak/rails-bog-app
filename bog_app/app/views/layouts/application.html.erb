@@ -9,10 +9,34 @@
   </head>
 
   <body>
-  	<nav>
-  		<%= link_to 'Home', creatures_path%>
-  		<%= link_to 'Add New Creature', new_creature_path %>
+  	<nav class="navbar navbar-default  ">
+      <ul class="nav nav-pills">
+    		<li><%= link_to 'Home', creatures_path%></li>
+    		<li><%= link_to 'Add New Creature', new_creature_path %></li>
+      </ul>
   	</nav>
-    <%= yield %>
+
+
+
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <%= yield %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 error-message">      
+          <% flash.each do |name, msg| %>
+            <div><%= msg %></div>
+          <% end %>
+        </div>
+      </div>
+      
+    </div>
+
+
   </body>
+
 </html>

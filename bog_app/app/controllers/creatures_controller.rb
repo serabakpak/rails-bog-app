@@ -20,6 +20,9 @@ class CreaturesController < ApplicationController
 		@creature = Creature.create(creature_params)
 		if @creature.save
 			redirect_to @creature
+		else
+			flash[:error] = @creature.errors.full_messages.join(" ")
+			render :new
 		end
 	end
 

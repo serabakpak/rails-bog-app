@@ -12,4 +12,24 @@
  *
  *= require_tree .
  *= require_self
+ *= require bootstrap-3.3.7.min
  */
+
+
+form {
+	display: inline-block;
+}
+
+.flex-container {
+	/*display: flex;*/
+	/*justify-content: space-around;*/
+
+}
+.avatar-image {
+	margin-left: 5em;
+}
+
+.error-message {
+	color: red;
+}
+
