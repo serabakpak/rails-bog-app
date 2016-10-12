@@ -13,9 +13,9 @@ Rails.application.routes.draw do
   patch '/creatures/:id', to: 'creatures#update'
   delete '/creatures/:id', to: 'creatures#destroy'
 
-  get '/signup', to: 'users#new'
+  get '/signup', to: 'users#new', as: 'new_user'
   post '/users', to: 'users#create'
-  get '/users/:id', to: 'users#show'
+  get '/users/:id', to: 'users#show', as: 'user'
 
 
 

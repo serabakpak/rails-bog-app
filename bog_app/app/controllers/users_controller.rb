@@ -9,8 +9,8 @@ class UsersController < ApplicationController
 			flash[:success] = 'User successfully created!'
 			redirect_to creatures_path
 		else
-			flash[:error] = 'There has been an error!'
-			render :new
+			flash[:error] = 'Email has already been taken!'
+			redirect_to new_user_path
 		end
 	end
 
