@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 	def create
 		user = User.create(user_params)
 		if user.save
+			login(user)
 			flash[:success] = 'User successfully created!'
 			redirect_to creatures_path
 		else
