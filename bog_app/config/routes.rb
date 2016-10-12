@@ -13,6 +13,10 @@ Rails.application.routes.draw do
   patch '/creatures/:id', to: 'creatures#update'
   delete '/creatures/:id', to: 'creatures#destroy'
 
+  get '/signup', to: 'users#new'
+  post '/users', to: 'users#create'
+  get '/users/:id', to: 'users#show'
+
 
 
 end
