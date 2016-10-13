@@ -25,6 +25,22 @@ h1 {
 	text-align: center;
 }
 
+.logo {
+	display: inline-block;
+	float: left;
+	margin-left: .8%;
+	font-size: 1.8em;
+}
+
+.links {
+	float: right;
+	margin-top: 1%;
+}
+
+nav li a {
+	color: black !important;
+}
+
 .avatar-image {
 	margin-left: 5em;
 }
@@ -33,9 +49,7 @@ h1 {
 	color: red;
 }
 
-.nav {
-	float: right;
-}
+
 
 .center {
 	text-align: center;

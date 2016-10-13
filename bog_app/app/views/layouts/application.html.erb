@@ -9,9 +9,11 @@
   </head>
 
   <body>
-  	<nav class="navbar navbar-default  ">
-      <ul class="nav nav-pills">
-    		<li><%= link_to 'Home', creatures_path%></li> 	
+  	<nav class="navbar navbar-default">
+      <ul class="logo nav nav-pills">
+        <li><%= link_to ':bog', creatures_path%></li>
+      </ul>
+      <ul class="links nav nav-pills">	
       
         <% if current_user %>
           <li><%= link_to 'Add New Creature', new_creature_path %></li>
