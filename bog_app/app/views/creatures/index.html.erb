@@ -1,0 +1,23 @@
+<h1>Creatures of the Bog</h1>
+
+<div class='center'><%= paginate @creatures%></div>
+<% @creatures.each do |creature| %>
+<div>	
+	<p>
+	<strong>Name: </strong><%= creature.name %>
+	<strong>Description: </strong><%= creature.description %>
+	</p>
+	
+	<%= button_to "Show", creature, method: :get, class: "btn btn-success" %>
+	<%= button_to "Edit", edit_creature_path(creature), method: :get, class: "btn btn-success" %>
+	<%= button_to "Delete", creature, method: :delete, data: { confirm: "Are you sure???" }, class: "btn btn-success" %>
+	<%= image_tag creature.avatar.url(:thumb),class: "avatar-image" %><hr>
+</div>
+<% end %>
+<div class='center'><%= paginate @creatures%></div>
+
+
+
+
+
+
