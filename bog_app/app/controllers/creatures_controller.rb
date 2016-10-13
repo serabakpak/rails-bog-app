@@ -1,9 +1,7 @@
 class CreaturesController < ApplicationController
 
 	def index
-		# @creatures = Creature.all
 		@creatures = Creature.order(:name).page params[:page]
-		@creatures = Creature.page(params[:page])
 	end
 
 	def new
