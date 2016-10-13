@@ -16,15 +16,15 @@
  */
 
 
+
 form {
 	display: inline-block;
 }
 
-.flex-container {
-	/*display: flex;*/
-	/*justify-content: space-around;*/
-
+h1 {
+	text-align: center;
 }
+
 .avatar-image {
 	margin-left: 5em;
 }
@@ -37,3 +37,6 @@ form {
 	float: right;
 }
 
+.center {
+	text-align: center;
+}
