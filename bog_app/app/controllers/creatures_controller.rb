@@ -1,7 +1,8 @@
 class CreaturesController < ApplicationController
 
 	def index
-		@creatures = Creature.order(:name).page params[:page]
+		# @creatures = Creature.order(:name).page params[:page]
+		@creatures = Creature.page(params[:page]).per(5)
 	end
 
 	def new
